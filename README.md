@@ -29,3 +29,8 @@ psql -h /tmp/tmp1kmc99ly postgres
 
 , which is the command you can use to connect to the database.
 When you terminate the process (using `kill` or control C), it will dump the data back to `path/to/backend/data` and stop the database.
+
+# Known issues
+
+* Sequences probably do not work.
+* Rows are not deterministically sorted.
