@@ -35,11 +35,11 @@ class Postgres:
     def __del__(self):
         self.stop()
 
-    def psql(self, *args):
-        subprocess.run([locate_bin("psql"), "-h", self.path, *args])
+    def psql(self, *args, **extra_opts):
+        return subprocess.run([locate_bin("psql"), "-h", self.path, *args], **extra_opts)
 
-    def pg_dump(self, dump_path):
-        subprocess.run([locate_bin("pg_dump"), "-h", self.path, "-f", dump_path, "--no-owner", "--no-privileges", "postgres"])
+    def pg_dump(self, *extra_args):
+        subprocess.run([locate_bin("pg_dump"), "-h", self.path, *extra_args, "postgres"])
 
 
 def locate_bin(bin):
