@@ -7,6 +7,8 @@ authors = ["alex <alex@pdp7.net>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 PyYAML = "^5.4.1"
+pgadmin4 = {version = "^5.3", extras = ["pgadmin"]}
+gunicorn = {version = "^20.1.0", extras = ["pgadmin"]}
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.23.1"
