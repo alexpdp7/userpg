@@ -33,4 +33,3 @@ When you terminate the process (using `kill` or control C), it will dump the dat
 # Known issues
 
 * Sequences probably do not work.
-* Rows are not deterministically sorted.

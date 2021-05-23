@@ -99,6 +99,7 @@ def _process_data(toc_entry: _TocEntry, columns: typing.List[str], input_path: p
             for column, value in zip(columns, data):
                 row.append([column, value])
             rows.append(row)
+    rows.sort()
     with open(output_path, "w", encoding="utf8") as output:
         yaml.dump(rows, output)
 
