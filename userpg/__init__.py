@@ -1,5 +1,6 @@
 import atexit
 import os
+import pathlib
 import subprocess
 import time
 
@@ -43,4 +44,5 @@ class Postgres:
 
 
 def locate_bin(bin):
-    return f"/usr/lib/postgresql/11/bin/{bin}"
+    last_postgres = sorted(list(pathlib.Path("/usr/lib/postgresql/").glob("*")), key=lambda p: int(p.name))[-1]
+    return last_postgres / f"bin/{bin}"

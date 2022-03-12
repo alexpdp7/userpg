@@ -5,11 +5,11 @@ description = ""
 authors = ["alex <alex@pdp7.net>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-PyYAML = "^5.4.1"
+python = "^3.9"
+PyYAML = "^6"
 
 [tool.poetry.dev-dependencies]
-ipython = "^7.23.1"
+ipython = "*"
 
 [tool.poetry.scripts]
 userpg = 'userpg.cli:main'

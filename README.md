@@ -2,7 +2,7 @@ Like Access, only worse!
 
 `userpg` allows you to run a PostgreSQL database as a user, using diffable text files as a back end storage.
 
-Currently it's only been tested to work under Debian 10, as the path to PostgreSQL binaries is hardcoded.
+Currently it's only been tested to work under Debian. `userpg` looks for PostgreSQL binaries in `/usr/lib/postgresql/N`.
 
 # Install
 
